@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.9
 
 COPY requirements.txt requirements.txt 
 
@@ -8,6 +8,6 @@ WORKDIR /js-fastapi-monitoring
 
 COPY . /js-fastapi-monitoring
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
